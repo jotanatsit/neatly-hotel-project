@@ -65,8 +65,8 @@ const Payment = (props) => {
     setClientSecret(result.data.clientSecret);
   };
 
-  useEffect(() => syncStripePromise, []);
-  useEffect(() => syncClientSecret, []);
+  useEffect(() => syncStripePromise(), []);
+  useEffect(() => syncClientSecret(), []);
 
   const appearance = {
     theme: "stripe",
